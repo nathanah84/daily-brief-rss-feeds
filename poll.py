@@ -7,10 +7,18 @@ The ONLY part you edit is the FEEDS block below. Each source is one line:
     ("Source name", "https://example.com/feed"),
 Keep the parentheses, quotes, and trailing comma. A line starting with #
 is switched off. Group sources under a section name in quotes.
+
+NOTE: feeds are fetched with a browser User-Agent and decompressed manually
+before parsing. This is what makes the Substack feeds work (their default
+response confused the bare parser).
 """
 import json
-import feedparser
+import gzip
+import zlib
+import urllib.request
 from datetime import datetime, timezone
+
+import feedparser
 
 FEEDS = {
     "Substack": [
@@ -21,7 +29,6 @@ FEEDS = {
         ("Giants, Gods & Dragons",   "https://gilberthouse.substack.com/feed"),
         ("Predictable",              "https://predictable.substack.com/feed"),
         ("Mind Over Markets",        "https://mindovermarkets.substack.com/feed"),
-        # Prophecy Watchers was in the source list but no feed URL was pulled.
         # ("Prophecy Watchers",      "https://prophecywatchers.substack.com/feed"),
     ],
     "Right Lane": [
@@ -38,7 +45,7 @@ FEEDS = {
         ("Fox News - Sports",   "https://moxie.foxnews.com/google-publisher/sports.xml"),
         ("Fox News - Tech",     "https://moxie.foxnews.com/google-publisher/tech.xml"),
         ("NBC News",            "https://feeds.nbcnews.com/nbcnews/public/news"),
-        ("CNN - US",            "http://rss.cnn.com/rss/edition_us.rss"),
+        # CNN edition_us feed removed - abandoned (newest item was 2023).
     ],
     "Crypto": [
         ("Cointelegraph",     "https://cointelegraph.com/rss"),
@@ -68,8 +75,7 @@ FEEDS = {
         ("All CHGO",            "https://allchgo.com/feed/"),
     ],
     "Notre Dame": [
-        ("One Foot Down",       "https://www.onefootdown.com/rss/index.xml"),
-        # Podcast (audio) feeds - episodes, not articles:
+        ("One Foot Down",           "https://www.onefootdown.com/rss/index.xml"),
         ("ND Podcast (Simplecast)", "https://feeds.simplecast.com/PiDvYqUW"),
         ("ND Podcast (Libsyn)",     "https://rss.libsyn.com/shows/99576/destinations/521650.xml"),
     ],
@@ -79,6 +85,33 @@ FEEDS = {
 }
 
 ITEMS_PER_FEED = 8   # how many recent posts to keep per source
+
+UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+
+
+def fetch_bytes(url):
+    """Fetch a URL with a browser UA and decompress gzip/deflate ourselves.
+    Returns bytes ready for feedparser, or raises."""
+    req = urllib.request.Request(url, headers={
+        "User-Agent": UA,
+        "Accept-Encoding": "gzip, deflate",
+        "Accept": "application/rss+xml, application/xml, text/xml, */*",
+    })
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        raw = resp.read()
+        enc = (resp.headers.get("Content-Encoding") or "").lower()
+    if "gzip" in enc:
+        try:
+            raw = gzip.decompress(raw)
+        except OSError:
+            pass
+    elif "deflate" in enc:
+        try:
+            raw = zlib.decompress(raw)
+        except zlib.error:
+            raw = zlib.decompress(raw, -zlib.MAX_WBITS)
+    return raw
 
 
 def iso_date(entry):
@@ -94,7 +127,12 @@ for section, sources in FEEDS.items():
     for name, url in sources:
         record = {"source": name, "feed": url, "posts": [], "error": ""}
         try:
-            d = feedparser.parse(url)
+            try:
+                data = fetch_bytes(url)
+                d = feedparser.parse(data)
+            except Exception:
+                d = feedparser.parse(url)
+
             if d.bozo and not d.entries:
                 record["error"] = "could not parse feed (%s)" % d.bozo_exception
             for e in d.entries[:ITEMS_PER_FEED]:
