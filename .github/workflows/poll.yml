@@ -1,0 +1,27 @@
+name: Poll RSS feeds
+ 
+on:
+  schedule:
+    - cron: "0 * * * *"     # top of every hour (UTC). Change if you want.
+  workflow_dispatch:         # adds a manual "Run workflow" button
+ 
+permissions:
+  contents: write            # REQUIRED so the job can save feeds.json back
+ 
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install feedparser
+      - run: python poll.py
+      - name: Commit feeds.json if it changed
+        run: |
+          git config user.name  "feeds-bot"
+          git config user.email "actions@github.com"
+          git add feeds.json
+          git diff --staged --quiet || git commit -m "update feeds.json"
+          git push
