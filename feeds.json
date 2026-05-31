@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-05-31T13:23:50.781288+00:00",
+  "generated_utc": "2026-05-31T13:43:29.111923+00:00",
   "sections": {
     "Substack": [
       {
@@ -616,6 +616,12 @@
         "feed": "https://moxie.foxnews.com/google-publisher/latest.xml",
         "posts": [
           {
+            "title": "Humanoid robot cleans first US apartment",
+            "url": "https://www.foxnews.com/tech/humanoid-robot-cleans-first-us-apartment",
+            "pubDate": "Sun, 31 May 2026 09:27:31 -0400",
+            "pubDate_iso": "2026-05-31T13:27:31+00:00"
+          },
+          {
             "title": "Arizona school board member gets backlash after mocking board president with Nazi salute",
             "url": "https://www.foxnews.com/politics/arizona-school-board-member-nazi-salute-backlash",
             "pubDate": "Sun, 31 May 2026 09:13:38 -0400",
@@ -656,12 +662,6 @@
             "url": "https://www.foxnews.com/outkick-sports/cardinals-fan-tries-throw-pete-crow-armstrongs-home-run-ball-back-onto-field-fails-miserably",
             "pubDate": "Sun, 31 May 2026 08:47:05 -0400",
             "pubDate_iso": "2026-05-31T12:47:05+00:00"
-          },
-          {
-            "title": "Pirates' Brandon Lowe ejected after ABS challenge was disallowed, leading to fly out",
-            "url": "https://www.foxnews.com/sports/pirates-brandon-lowe-ejected-abs-challenge-disallowed-leading-fly",
-            "pubDate": "Sun, 31 May 2026 08:40:31 -0400",
-            "pubDate_iso": "2026-05-31T12:40:31+00:00"
           }
         ],
         "error": ""
@@ -836,6 +836,12 @@
         "feed": "https://moxie.foxnews.com/google-publisher/sports.xml",
         "posts": [
           {
+            "title": "A'ja Wilson expected to dominate as Aces face Golden State Valkyries in only WNBA game on schedule",
+            "url": "https://www.foxnews.com/sports/aja-wilson-expected-dominate-aces-face-golden-state-valkyries-wnba-game-schedule",
+            "pubDate": "Sun, 31 May 2026 09:11:24 -0400",
+            "pubDate_iso": "2026-05-31T13:11:24+00:00"
+          },
+          {
             "title": "NBA fan, 17, on life support after suffering catastrophic injuries while celebrating Spurs' playoff win",
             "url": "https://www.foxnews.com/sports/nba-fan-17-life-support-suffering-catastrophic-injuries-celebrating-spurs-playoff-win",
             "pubDate": "Sun, 31 May 2026 09:05:23 -0400",
@@ -876,12 +882,6 @@
             "url": "https://www.foxnews.com/sports/victor-wembanyama-leads-spurs-past-thunder-set-1999-nba-finals-rematch-knicks",
             "pubDate": "Sat, 30 May 2026 23:13:10 -0400",
             "pubDate_iso": "2026-05-31T03:13:10+00:00"
-          },
-          {
-            "title": "Chris Richards won't travel for USMNT friendly as ankle injury clouds World Cup preparations for breakout star",
-            "url": "https://www.foxnews.com/sports/chris-richards-wont-travel-usmnt-friendly-ankle-injury-clouds-world-cup-preparations-breakout-star",
-            "pubDate": "Sat, 30 May 2026 16:22:03 -0400",
-            "pubDate_iso": "2026-05-30T20:22:03+00:00"
           }
         ],
         "error": ""
@@ -890,6 +890,12 @@
         "source": "Fox News - Tech",
         "feed": "https://moxie.foxnews.com/google-publisher/tech.xml",
         "posts": [
+          {
+            "title": "Humanoid robot cleans first US apartment",
+            "url": "https://www.foxnews.com/tech/humanoid-robot-cleans-first-us-apartment",
+            "pubDate": "Sun, 31 May 2026 09:27:31 -0400",
+            "pubDate_iso": "2026-05-31T13:27:31+00:00"
+          },
           {
             "title": "Will this high-tech lounge change how you wait at airports?",
             "url": "https://www.foxnews.com/tech/high-tech-lounge-change-wait-airports",
@@ -931,12 +937,6 @@
             "url": "https://www.foxnews.com/tech/cab-less-electric-trucks-hit-ohio-roads",
             "pubDate": "Thu, 28 May 2026 11:54:54 -0400",
             "pubDate_iso": "2026-05-28T15:54:54+00:00"
-          },
-          {
-            "title": "Your health app may be failing you",
-            "url": "https://www.foxnews.com/tech/your-health-app-failing-you",
-            "pubDate": "Wed, 27 May 2026 12:30:52 -0400",
-            "pubDate_iso": "2026-05-27T16:30:52+00:00"
           }
         ],
         "error": ""
@@ -1566,6 +1566,18 @@
         "feed": "https://247wallst.com/feed/",
         "posts": [
           {
+            "title": "Suze Orman Shows the Exact Steps on a $1.6 Million Roth Conversion to Shrink Future RMDs",
+            "url": "https://247wallst.com/personal-finance/2026/05/31/suze-orman-shows-the-exact-steps-on-a-1-6-million-roth-conversion-to-shrink-future-rmds/",
+            "pubDate": "Sun, 31 May 2026 13:35:14 +0000",
+            "pubDate_iso": "2026-05-31T13:35:14+00:00"
+          },
+          {
+            "title": "Retiring at 62 With $2.6 Million Means Quietly Funding $24,000 of Adult-Son Health Insurance Until He Hits 26",
+            "url": "https://247wallst.com/personal-finance/2026/05/31/retiring-at-62-with-2-6-million-means-quietly-funding-24000-of-adult-son-health-insurance-until-he-hits-26/",
+            "pubDate": "Sun, 31 May 2026 13:30:02 +0000",
+            "pubDate_iso": "2026-05-31T13:30:02+00:00"
+          },
+          {
             "title": "The Hidden Cost of Large IRA Withdrawals: How $50,000 Can Cost You $6,200 in Taxes",
             "url": "https://247wallst.com/personal-finance/2026/05/31/the-hidden-cost-of-large-ira-withdrawals-how-50000-can-cost-you-6200-in-taxes/",
             "pubDate": "Sun, 31 May 2026 12:45:27 +0000",
@@ -1600,18 +1612,6 @@
             "url": "https://247wallst.com/personal-finance/2026/05/31/a-67-year-old-widow-with-1-6-million-discovers-her-late-husbands-ira-will-cost-her-over-100000-in-avoidable-tax-through-retirement/",
             "pubDate": "Sun, 31 May 2026 11:24:22 +0000",
             "pubDate_iso": "2026-05-31T11:24:22+00:00"
-          },
-          {
-            "title": "Why a Single Self-Employed 62-Year-Old Should Claim Social Security at FRA, Not 70",
-            "url": "https://247wallst.com/personal-finance/2026/05/31/why-a-single-self-employed-62-year-old-should-claim-social-security-at-fra-not-70/",
-            "pubDate": "Sun, 31 May 2026 11:23:07 +0000",
-            "pubDate_iso": "2026-05-31T11:23:07+00:00"
-          },
-          {
-            "title": "Jensen Huang Just Called Humanoid Robots a $40 Trillion Market. Here’s Why Wall Street Is Loading Up on Physical AI Stocks",
-            "url": "https://247wallst.com/investing/2026/05/31/jensen-huang-just-called-humanoid-robots-a-40-trillion-market-heres-why-wall-street-is-loading-up-on-physical-ai-stocks/",
-            "pubDate": "Sun, 31 May 2026 11:20:57 +0000",
-            "pubDate_iso": "2026-05-31T11:20:57+00:00"
           }
         ],
         "error": ""
