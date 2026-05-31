@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-05-31T00:28:01.281172+00:00",
+  "generated_utc": "2026-05-31T00:33:14.570382+00:00",
   "sections": {
     "Substack": [
       {
@@ -701,61 +701,6 @@
           }
         ],
         "error": ""
-      },
-      {
-        "source": "CNN - US",
-        "feed": "http://rss.cnn.com/rss/edition_us.rss",
-        "posts": [
-          {
-            "title": "Fulton County, Georgia, jail leadership resigns after inmate's death and accusations of unsanitary conditions",
-            "url": "https://www.cnn.com/2023/04/18/us/fulton-county-jail-leadership-resignations-lashawn-thompson-death/index.html",
-            "pubDate": "Tue, 18 Apr 2023 15:08:03 GMT",
-            "pubDate_iso": "2023-04-18T15:08:03+00:00"
-          },
-          {
-            "title": "He was free for 2 years. Now Crosley Green is back in prison for a crime he says he didn't commit",
-            "url": "https://www.cnn.com/2023/04/17/us/crosley-green-prison-return/index.html",
-            "pubDate": "Mon, 17 Apr 2023 22:45:49 GMT",
-            "pubDate_iso": "2023-04-17T22:45:49+00:00"
-          },
-          {
-            "title": "Tennessee Air National Guardsman applied to be a hitman online, the FBI says. It was a spoof website and now he's facing charges",
-            "url": "https://www.cnn.com/2023/04/17/us/tennessee-air-national-guardsman-hitman-online-application/index.html",
-            "pubDate": "Mon, 17 Apr 2023 09:06:12 GMT",
-            "pubDate_iso": "2023-04-17T09:06:12+00:00"
-          },
-          {
-            "title": "Family of victim and survivors of Indianapolis FedEx mass shooting file lawsuit against gun magazine manufacturer and distributors",
-            "url": "https://www.cnn.com/2023/04/16/us/lawsuit-indianapolis-fedex-mass-shooting/index.html",
-            "pubDate": "Mon, 17 Apr 2023 18:54:28 GMT",
-            "pubDate_iso": "2023-04-17T18:54:28+00:00"
-          },
-          {
-            "title": "GOP prepared to block vote to replace Feinstein on Senate Judiciary",
-            "url": "https://www.cnn.com/2023/04/18/politics/schumer-senate-feinstein-vote-cardin/index.html",
-            "pubDate": "Tue, 18 Apr 2023 22:03:13 GMT",
-            "pubDate_iso": "2023-04-18T22:03:13+00:00"
-          },
-          {
-            "title": "Anti-abortion doctors urge Supreme Court to keep mifepristone restrictions in place",
-            "url": "https://www.cnn.com/2023/04/18/politics/abortion-supreme-court-mifepristone-restrictions-filing/index.html",
-            "pubDate": "Tue, 18 Apr 2023 16:35:37 GMT",
-            "pubDate_iso": "2023-04-18T16:35:37+00:00"
-          },
-          {
-            "title": "McCarthy makes plea for Republicans to back debt ceiling plan",
-            "url": "https://www.cnn.com/2023/04/18/politics/mccarthy-debt-limit-plan/index.html",
-            "pubDate": "Tue, 18 Apr 2023 15:17:18 GMT",
-            "pubDate_iso": "2023-04-18T15:17:18+00:00"
-          },
-          {
-            "title": "Supreme Court seems sympathetic to postal worker who didn't work Sundays in dispute over religious accommodations",
-            "url": "https://www.cnn.com/2023/04/18/politics/groff-dejoy-supreme-court-religious-liberty/index.html",
-            "pubDate": "Tue, 18 Apr 2023 17:37:57 GMT",
-            "pubDate_iso": "2023-04-18T17:37:57+00:00"
-          }
-        ],
-        "error": ""
       }
     ],
     "Crypto": [
@@ -985,9 +930,15 @@
         "posts": [
           {
             "title": "OpenAI, SpaceX funding fuels bets on next-wave Asian AI winners",
-            "url": "https://cryptobriefing.com/openai-spacex-asian-ai-chipmakers/",
-            "pubDate": "Sun, 31 May 2026 00:23:30 +0000",
-            "pubDate_iso": "2026-05-31T00:23:30+00:00"
+            "url": "https://cryptobriefing.com/asian-ai-investors-openai-spacex-funding/",
+            "pubDate": "Sun, 31 May 2026 00:30:58 +0000",
+            "pubDate_iso": "2026-05-31T00:30:58+00:00"
+          },
+          {
+            "title": "Iran refuses uranium surrender, stalling US agreement talks",
+            "url": "https://cryptobriefing.com/iran-refuses-uranium-surrender-stalling-us-agreement-talks/",
+            "pubDate": "Sun, 31 May 2026 00:29:26 +0000",
+            "pubDate_iso": "2026-05-31T00:29:26+00:00"
           },
           {
             "title": "SoftBank to invest €45B in AI data centers in France by 2031",
@@ -1024,12 +975,6 @@
             "url": "https://cryptobriefing.com/sf-home-accepts-openai-anthropic-stock/",
             "pubDate": "Sat, 30 May 2026 19:38:18 +0000",
             "pubDate_iso": "2026-05-30T19:38:18+00:00"
-          },
-          {
-            "title": "Iran claims draft deal grants control over Strait of Hormuz, $12B asset access",
-            "url": "https://cryptobriefing.com/iran-claims-draft-deal-grants-control-over-strait-of-hormuz-12b-asset-access/",
-            "pubDate": "Sat, 30 May 2026 19:14:21 +0000",
-            "pubDate_iso": "2026-05-30T19:14:21+00:00"
           }
         ],
         "error": ""
@@ -1408,12 +1353,6 @@
         "feed": "https://www.windycitygridiron.com/rss/index.xml",
         "posts": [
           {
-            "title": "Is Caleb Williams the Madden 27 cover athlete?",
-            "url": "https://www.windycitygridiron.com/chicago-bears-news/116956/caleb-williams-madden-cover-chicago-bears-speculation",
-            "pubDate": "2026-05-30T14:47:51-04:00",
-            "pubDate_iso": "2026-05-30T18:47:51+00:00"
-          },
-          {
             "title": "Chicago Bears Question of the Day: How many yards will Caleb throw for in 2026?",
             "url": "https://www.windycitygridiron.com/chicago-bears-analysis/116908/chicago-bears-question-of-the-day-how-many-yards-will-caleb-williams-throw-for-in-2026",
             "pubDate": "2026-05-30T12:00:00-04:00",
@@ -1454,6 +1393,12 @@
             "url": "https://www.windycitygridiron.com/chicago-bears-news/116877/bears-jaylon-johnson-attends-voluntary-ota-kyler-gordon",
             "pubDate": "2026-05-28T17:30:00-04:00",
             "pubDate_iso": "2026-05-28T21:30:00+00:00"
+          },
+          {
+            "title": "Ben Johnson: “I’m Buying Luther Burden Stock Right Now”",
+            "url": "https://www.windycitygridiron.com/chicago-bears-news/116870/ben-johnson-im-buying-luther-burden-stock-right-now",
+            "pubDate": "2026-05-28T14:52:33-04:00",
+            "pubDate_iso": "2026-05-28T18:52:33+00:00"
           }
         ],
         "error": ""
@@ -1795,12 +1740,6 @@
         "feed": "https://www.onefootdown.com/rss/index.xml",
         "posts": [
           {
-            "title": "Notre Dame and Texas Tech… yeah go ahead and schedule that football game",
-            "url": "https://www.onefootdown.com/notre-dame-fighting-irish-football/82740/notre-dame-and-texas-tech-yeah-go-ahead-and-schedule-that-football-game",
-            "pubDate": "2026-05-30T14:16:12-04:00",
-            "pubDate_iso": "2026-05-30T18:16:12+00:00"
-          },
-          {
             "title": "Five Notre Dame Football Photos for a Friday: The Elusive Tight End",
             "url": "https://www.onefootdown.com/notre-dame-fighting-irish-football/82727/five-notre-dame-football-photos-for-a-friday-the-elusive-tight-end",
             "pubDate": "2026-05-29T00:33:44-04:00",
@@ -1841,6 +1780,12 @@
             "url": "https://www.onefootdown.com/notre-dame-fighting-irish-football/82698/are-the-texas-longhorns-too-cowardly-to-play-notre-dame",
             "pubDate": "2026-05-27T14:59:16-04:00",
             "pubDate_iso": "2026-05-27T18:59:16+00:00"
+          },
+          {
+            "title": "Notre Dame’s CJ Carr is that top tier quarterback we talked about",
+            "url": "https://www.onefootdown.com/notre-dame-fighting-irish-football/82685/notre-dames-cj-carr-is-that-top-tier-quarterback-we-talked-about-cfb-nd-rankings",
+            "pubDate": "2026-05-27T02:46:53-04:00",
+            "pubDate_iso": "2026-05-27T06:46:53+00:00"
           }
         ],
         "error": ""
@@ -1851,49 +1796,49 @@
         "posts": [
           {
             "title": "Notre Dame recruiting UPDATE: What's next for the Irish? | Top targets visiting ELSEWHERE",
-            "url": "https://feeds.simplecast.com/blueandgold.com",
+            "url": "blueandgold.com",
             "pubDate": "Thu, 28 May 2026 18:25:32 +0000",
             "pubDate_iso": "2026-05-28T18:25:32+00:00"
           },
           {
             "title": "Pod Like A Champion: Will Texas back out of series vs. Notre Dame? + Irish recruiting stays HOT",
-            "url": "https://feeds.simplecast.com/blueandgold.com",
+            "url": "blueandgold.com",
             "pubDate": "Thu, 28 May 2026 03:36:16 +0000",
             "pubDate_iso": "2026-05-28T03:36:16+00:00"
           },
           {
             "title": "Notre Dame 6-pack: Analyzing ND scheduling, Aneyas Williams, favorite road venues, MORE",
-            "url": "https://feeds.simplecast.com/blueandgold.com",
+            "url": "blueandgold.com",
             "pubDate": "Tue, 26 May 2026 22:06:49 +0000",
             "pubDate_iso": "2026-05-26T22:06:49+00:00"
           },
           {
             "title": "Notre Dame recruiting UPDATE: Irish predicted to land ELITE recruits | Flip targets | MORE",
-            "url": "https://feeds.simplecast.com/blueandgold.com",
+            "url": "blueandgold.com",
             "pubDate": "Fri, 22 May 2026 19:45:12 +0000",
             "pubDate_iso": "2026-05-22T19:45:12+00:00"
           },
           {
             "title": "Pod Like A Champion: Notre Dame recruiting is on FIRE | Elite Chicago recruits trending ND",
-            "url": "https://feeds.simplecast.com/blueandgold.com",
+            "url": "blueandgold.com",
             "pubDate": "Thu, 21 May 2026 04:56:56 +0000",
             "pubDate_iso": "2026-05-21T04:56:56+00:00"
           },
           {
             "title": "Pod Like A Champion: In-depth Notre Dame recruiting analysis with Landon Tengwall",
-            "url": "https://feeds.simplecast.com/blueandgold.com",
+            "url": "blueandgold.com",
             "pubDate": "Thu, 7 May 2026 02:24:48 +0000",
             "pubDate_iso": "2026-05-07T02:24:48+00:00"
           },
           {
             "title": "Pod Like A Champion: Blue-Gold Game reflections & film breakdown with Landon Tengwall",
-            "url": "https://feeds.simplecast.com/blueandgold.com",
+            "url": "blueandgold.com",
             "pubDate": "Thu, 30 Apr 2026 00:30:24 +0000",
             "pubDate_iso": "2026-04-30T00:30:24+00:00"
           },
           {
             "title": "Notre Dame 6-pack: Reflecting on Blue-Gold Game, questions heading into the summer, MORE",
-            "url": "https://feeds.simplecast.com/blueandgold.com",
+            "url": "blueandgold.com",
             "pubDate": "Wed, 29 Apr 2026 00:47:52 +0000",
             "pubDate_iso": "2026-04-29T00:47:52+00:00"
           }
