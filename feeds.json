@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-05-31T00:33:14.570382+00:00",
+  "generated_utc": "2026-05-31T00:36:50.372094+00:00",
   "sections": {
     "Substack": [
       {
@@ -929,6 +929,12 @@
         "feed": "https://cryptobriefing.com/feed",
         "posts": [
           {
+            "title": "Lebanon accuses Israel of “scorched-earth policy” amid expanded invasion",
+            "url": "https://cryptobriefing.com/lebanon-accuses-israel-of-scorched-earth-policy-amid-expanded-invasion/",
+            "pubDate": "Sun, 31 May 2026 00:33:59 +0000",
+            "pubDate_iso": "2026-05-31T00:33:59+00:00"
+          },
+          {
             "title": "OpenAI, SpaceX funding fuels bets on next-wave Asian AI winners",
             "url": "https://cryptobriefing.com/asian-ai-investors-openai-spacex-funding/",
             "pubDate": "Sun, 31 May 2026 00:30:58 +0000",
@@ -969,12 +975,6 @@
             "url": "https://cryptobriefing.com/iran-reasserts-control-over-hormuz-strait-amid-us-tensions/",
             "pubDate": "Sat, 30 May 2026 20:18:42 +0000",
             "pubDate_iso": "2026-05-30T20:18:42+00:00"
-          },
-          {
-            "title": "San Francisco home accepts OpenAI, Anthropic stock as payment for $2.9M sale",
-            "url": "https://cryptobriefing.com/sf-home-accepts-openai-anthropic-stock/",
-            "pubDate": "Sat, 30 May 2026 19:38:18 +0000",
-            "pubDate_iso": "2026-05-30T19:38:18+00:00"
           }
         ],
         "error": ""
@@ -1253,30 +1253,6 @@
           }
         ],
         "error": ""
-      },
-      {
-        "source": "CCN - Crypto",
-        "feed": "https://www.ccn.com/rss-feeds/crypto/",
-        "posts": [],
-        "error": "could not parse feed (<unknown>:69:50: undefined entity)"
-      },
-      {
-        "source": "CCN - Crypto News",
-        "feed": "https://www.ccn.com/news/crypto-news/feeds/",
-        "posts": [],
-        "error": "could not parse feed (<unknown>:69:50: undefined entity)"
-      },
-      {
-        "source": "CCN - Analysis",
-        "feed": "https://www.ccn.com/analysis/crypto-analysis/feeds/",
-        "posts": [],
-        "error": "could not parse feed (<unknown>:69:50: undefined entity)"
-      },
-      {
-        "source": "CCN - Technology",
-        "feed": "https://www.ccn.com/rss-feeds/technology/",
-        "posts": [],
-        "error": "could not parse feed (<unknown>:69:50: undefined entity)"
       },
       {
         "source": "Disruption Banking",
@@ -1740,6 +1716,12 @@
         "feed": "https://www.onefootdown.com/rss/index.xml",
         "posts": [
           {
+            "title": "Notre Dame and Texas Tech… yeah go ahead and schedule that football game",
+            "url": "https://www.onefootdown.com/notre-dame-fighting-irish-football/82740/notre-dame-and-texas-tech-yeah-go-ahead-and-schedule-that-football-game",
+            "pubDate": "2026-05-30T14:16:12-04:00",
+            "pubDate_iso": "2026-05-30T18:16:12+00:00"
+          },
+          {
             "title": "Five Notre Dame Football Photos for a Friday: The Elusive Tight End",
             "url": "https://www.onefootdown.com/notre-dame-fighting-irish-football/82727/five-notre-dame-football-photos-for-a-friday-the-elusive-tight-end",
             "pubDate": "2026-05-29T00:33:44-04:00",
@@ -1780,12 +1762,6 @@
             "url": "https://www.onefootdown.com/notre-dame-fighting-irish-football/82698/are-the-texas-longhorns-too-cowardly-to-play-notre-dame",
             "pubDate": "2026-05-27T14:59:16-04:00",
             "pubDate_iso": "2026-05-27T18:59:16+00:00"
-          },
-          {
-            "title": "Notre Dame’s CJ Carr is that top tier quarterback we talked about",
-            "url": "https://www.onefootdown.com/notre-dame-fighting-irish-football/82685/notre-dames-cj-carr-is-that-top-tier-quarterback-we-talked-about-cfb-nd-rankings",
-            "pubDate": "2026-05-27T02:46:53-04:00",
-            "pubDate_iso": "2026-05-27T06:46:53+00:00"
           }
         ],
         "error": ""
