@@ -8,13 +8,15 @@ The ONLY part you edit is the FEEDS block below. Each source is one line:
 Keep the parentheses, quotes, and trailing comma. A line starting with #
 is switched off. Group sources under a section name in quotes.
 
-NOTE: feeds are fetched with a browser User-Agent and decompressed manually
-before parsing. This is what makes the Substack feeds work (their default
-response confused the bare parser).
+Substack blocks GitHub's servers (403), so Substack feeds are routed through
+the AllOrigins proxy automatically. Any feed whose URL contains a domain in
+PROXY_DOMAINS gets proxied; everything else is fetched directly.
 """
 import json
 import gzip
 import zlib
+import time
+import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 
@@ -45,7 +47,6 @@ FEEDS = {
         ("Fox News - Sports",   "https://moxie.foxnews.com/google-publisher/sports.xml"),
         ("Fox News - Tech",     "https://moxie.foxnews.com/google-publisher/tech.xml"),
         ("NBC News",            "https://feeds.nbcnews.com/nbcnews/public/news"),
-        # CNN edition_us feed removed - abandoned (newest item was 2023).
     ],
     "Crypto": [
         ("Cointelegraph",     "https://cointelegraph.com/rss"),
@@ -58,12 +59,9 @@ FEEDS = {
         ("The Block",         "https://www.theblock.co/rss.xml"),
         ("Bitcoin Magazine",  "https://bitcoinmagazine.com/feed"),
         ("NewsBTC",           "https://www.newsbtc.com/feed/"),
-        ("CCN - Crypto",      "https://www.ccn.com/rss-feeds/crypto/"),
-        ("CCN - Crypto News", "https://www.ccn.com/news/crypto-news/feeds/"),
-        ("CCN - Analysis",    "https://www.ccn.com/analysis/crypto-analysis/feeds/"),
-        ("CCN - Technology",  "https://www.ccn.com/rss-feeds/technology/"),
         ("Disruption Banking","https://www.disruptionbanking.com/feed/"),
         ("24/7 Wall St",      "https://247wallst.com/feed/"),
+        # CCN feeds removed - their XML has a malformed entity that won't parse.
     ],
     "Bears": [
         ("Windy City Gridiron", "https://www.windycitygridiron.com/rss/index.xml"),
@@ -84,21 +82,32 @@ FEEDS = {
     ],
 }
 
-ITEMS_PER_FEED = 8   # how many recent posts to keep per source
+ITEMS_PER_FEED = 8
+
+# Feeds whose host contains any of these get routed through AllOrigins,
+# because the host blocks GitHub's datacenter IPs with a 403.
+PROXY_DOMAINS = ("substack.com",)
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
 
+def needs_proxy(url):
+    return any(dom in url for dom in PROXY_DOMAINS)
+
+
+def proxied(url):
+    return "https://api.allorigins.win/raw?url=" + urllib.parse.quote(url, safe="")
+
+
 def fetch_bytes(url):
-    """Fetch a URL with a browser UA and decompress gzip/deflate ourselves.
-    Returns bytes ready for feedparser, or raises."""
+    """Fetch with a browser UA, decompress gzip/deflate. Returns bytes."""
     req = urllib.request.Request(url, headers={
         "User-Agent": UA,
         "Accept-Encoding": "gzip, deflate",
         "Accept": "application/rss+xml, application/xml, text/xml, */*",
     })
-    with urllib.request.urlopen(req, timeout=30) as resp:
+    with urllib.request.urlopen(req, timeout=45) as resp:
         raw = resp.read()
         enc = (resp.headers.get("Content-Encoding") or "").lower()
     if "gzip" in enc:
@@ -114,6 +123,28 @@ def fetch_bytes(url):
     return raw
 
 
+def get_feed(url):
+    """Fetch + parse one feed, using the proxy when required, with one retry."""
+    target = proxied(url) if needs_proxy(url) else url
+    last_err = None
+    for attempt in range(2):
+        try:
+            data = fetch_bytes(target)
+            d = feedparser.parse(data)
+            if d.entries or not d.bozo:
+                return d
+            last_err = d.bozo_exception
+        except Exception as ex:
+            last_err = ex
+        time.sleep(2)
+    # Final fallback: let feedparser fetch the original directly.
+    d = feedparser.parse(url)
+    if not d.entries and last_err and not d.bozo:
+        d.bozo = 1
+        d.bozo_exception = last_err
+    return d
+
+
 def iso_date(entry):
     if entry.get("published_parsed"):
         return datetime(*entry.published_parsed[:6], tzinfo=timezone.utc).isoformat()
@@ -127,12 +158,7 @@ for section, sources in FEEDS.items():
     for name, url in sources:
         record = {"source": name, "feed": url, "posts": [], "error": ""}
         try:
-            try:
-                data = fetch_bytes(url)
-                d = feedparser.parse(data)
-            except Exception:
-                d = feedparser.parse(url)
-
+            d = get_feed(url)
             if d.bozo and not d.entries:
                 record["error"] = "could not parse feed (%s)" % d.bozo_exception
             for e in d.entries[:ITEMS_PER_FEED]:
